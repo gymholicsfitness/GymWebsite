@@ -54,10 +54,10 @@
     text-decoration: none;
   }
   .logo-img {
-    width: 40px; height: 40px;
-    border-radius: 50%;
+     height: 68px;
+   <!--  border-radius: 50%;
     object-fit: cover;
-    border: 2px solid var(--gold);
+    border: 2px solid var(--gold) -->;
   }
   .logo-text {
     font-family: 'Bebas Neue', sans-serif;
@@ -433,7 +433,7 @@
 
   .testi-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(60%, 1fr));
     gap: 1.5rem;
   }
 
@@ -629,7 +629,6 @@
   <div class="nav-container">
     <a href="index.html" class="logo">
       <img src="logo.jpg" alt="Gymholics Logo" class="logo-img">
-      <span class="logo-text">GYMHOLICS</span>
     </a>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">
       <span></span><span></span><span></span>
@@ -776,11 +775,11 @@
     <div class="posture-grid">
       <div class="posture-item" onclick="openLightbox('postures.jpg')">
         <span class="posture-caption">POSTURES</span>
-        <img src="postures.jpg" alt="Posture Results" loading="lazy" style="cursor:pointer;">
+        <img src="Images/Clients/ClientImage1.jpg" alt="Posture Results" loading="lazy" style="cursor:pointer;">
       </div>
       <div class="posture-item" onclick="openLightbox('ClientImage.jpg')">
         <span class="posture-caption">360° TRACKED</span>
-        <img src="ClientImage.jpg" alt="Client Progress" loading="lazy" style="cursor:pointer;">
+        <img src="Images/Clients/ClientImage3.jpg" alt="Client Progress" loading="lazy" style="cursor:pointer;">
       </div>
     </div>
   </div>
@@ -794,7 +793,7 @@
       <h2>WHAT THEY <span class="gold">SAY</span></h2>
     </div>
     <div class="testi-grid">
-	<div class="sk-ww-google-reviews" data-embed-id="25667100"></div><script src="https://widgets.sociablekit.com/google-reviews/widget.js" defer></script>
+	<iframe src="https://widgets.sociablekit.com/google-reviews/iframe/25667100" frameborder="0" width="100%" height="400px"></iframe>
 <!-- 	<iframe src="https://www.google.com/maps/embed?pb=https://maps.app.goo.gl/mYzqwu2J3G3oQWuq6" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
      </div>
   </div>
@@ -815,8 +814,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="logo">
-          <img src="logo.jpg" alt="" class="logo-img">
-          <span class="logo-text">GYMHOLICS</span>
+          <img  alt="" class="logo-img">
         </a>
         <p>Where champions are made. Push your limits every single day.</p>
         <div class="social-links">

@@ -85,7 +85,7 @@ p { line-height: 1.7; color: var(--light-gray); }
   height: 100%; display: flex; align-items: center; justify-content: space-between;
 }
 .logo { display: flex; align-items: center; gap: 12px; }
-.logo-img { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; border: 2px solid var(--gold); }
+.logo-img {  height: 68px;  content: url('logo.png');}
 .logo-text { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; letter-spacing: 3px; color: var(--gold); }
 .nav-links { display: flex; align-items: center; gap: 8px; }
 .nav-links li a {
@@ -127,7 +127,7 @@ p { line-height: 1.7; color: var(--light-gray); }
 .slide.active { opacity: 1; z-index: 1; }
 .video-slide { background: var(--black); }
 .bg-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.video-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.6); }
+.video-overlay { position: absolute; inset: 0; /* background: rgba(0,0,0,0.6); */ }
 .slide-content {
   position: relative; z-index: 2;
   max-width: 1200px; margin: 0 auto; padding: 0 40px;

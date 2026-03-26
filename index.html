@@ -13,8 +13,7 @@
 <nav class="navbar" id="navbar">
   <div class="nav-container">
     <a href="index.html" class="logo">
-      <img src="logo.jpg" alt="Gymholics Logo" class="logo-img">
-      <span class="logo-text">GYMHOLICS</span>
+      <img  class="logo-img">
     </a>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">
       <span></span><span></span><span></span>
@@ -31,7 +30,22 @@
 
 <!-- HERO SLIDER -->
 <section class="hero-slider" id="heroSlider">
-  <div class="slide active" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80');">
+ <div class="slide video-slide active">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="Images/VideoBanner.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+    <div class="slide-content">
+      <p class="slide-tag">Real People. Real Results.</p>
+      <h1>YOUR<br><span class="gold">TRANSFORMATION</span></h1>
+      <p class="slide-sub">Join thousands who changed their lives at Gymholics.</p>
+      <div class="slide-btns">
+        <a href="reviews.html" class="btn-gold">See Stories</a>
+        <a href="contact.html" class="btn-outline">Join Now</a>
+      </div>
+    </div>
+  </div>
+  <div class="slide " style="background-image: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80');">
     <div class="slide-content">
       <p class="slide-tag">Welcome to Gymholics</p>
       <h1>FORGE YOUR<br><span class="gold">LEGEND</span></h1>
@@ -50,21 +64,6 @@
       <div class="slide-btns">
         <a href="contact.html" class="btn-gold">Get Membership</a>
         <a href="reviews.html" class="btn-outline">See Results</a>
-      </div>
-    </div>
-  </div>
-  <div class="slide video-slide">
-    <video autoplay muted loop playsinline class="bg-video">
-      <source src="Images/VideoBanner.mp4" type="video/mp4">
-    </video>
-    <div class="video-overlay"></div>
-    <div class="slide-content">
-      <p class="slide-tag">Real People. Real Results.</p>
-      <h1>YOUR<br><span class="gold">TRANSFORMATION</span></h1>
-      <p class="slide-sub">Join thousands who changed their lives at Gymholics.</p>
-      <div class="slide-btns">
-        <a href="reviews.html" class="btn-gold">See Stories</a>
-        <a href="contact.html" class="btn-outline">Join Now</a>
       </div>
     </div>
   </div>
@@ -142,13 +141,13 @@
 </section>
 
 <!-- CTA STRIP -->
-<section class="cta-strip">
+<!-- <section class="cta-strip">
   <div class="container">
     <h2>READY TO <span class="gold">TRANSFORM?</span></h2>
     <p>First month free for new members. No contracts. Cancel anytime.</p>
     <a href="contact.html" class="btn-gold">Claim Free Trial</a>
   </div>
-</section>
+</section> -->
 
 <!-- GALLERY PREVIEW -->
 <section class="gallery-preview section-pad">
@@ -162,7 +161,7 @@
       <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80')"><div class="gallery-overlay"><span>Free Weights</span></div></div>
       <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80')"><div class="gallery-overlay"><span>Cardio Zone</span></div></div>
       <div class="gallery-item wide" style="background-image:url('https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=800&q=80')"><div class="gallery-overlay"><span>Group Classes</span></div></div>
-      <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&q=80')"><div class="gallery-overlay"><span>Boxing Ring</span></div></div>
+      <!-- <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&q=80')"><div class="gallery-overlay"><span>Boxing Ring</span></div></div> -->
     </div>
     <div class="center-btn"><a href="reviews.html" class="btn-outline">View Full Gallery</a></div>
   </div>
@@ -177,21 +176,7 @@
     </div>
     <div class="testi-carousel" id="testiCarousel">
       <div class="testi-track" id="testiTrack">
-        <div class="testi-card">
-          <div class="stars">★★★★★</div>
-          <p>"Lost 18kg in 4 months. The trainers here are different — they push you but also care deeply about your form and health."</p>
-          <div class="testi-author"><div class="author-avatar" style="background:#d4af37">R</div><div><strong>Rahul Mehta</strong><span>Member since 2022</span></div></div>
-        </div>
-        <div class="testi-card">
-          <div class="stars">★★★★★</div>
-          <p>"Best gym in the region. The equipment is top-notch, the vibe is electric, and every session leaves me feeling unstoppable."</p>
-          <div class="testi-author"><div class="author-avatar" style="background:#b8860b">P</div><div><strong>Priya Sharma</strong><span>Member since 2023</span></div></div>
-        </div>
-        <div class="testi-card">
-          <div class="stars">★★★★★</div>
-          <p>"Joined for weight loss, stayed for the community. Gymholics is more than a gym — it's a lifestyle transformation hub."</p>
-          <div class="testi-author"><div class="author-avatar" style="background:#c8942a">A</div><div><strong>Arjun Patil</strong><span>Member since 2021</span></div></div>
-        </div>
+       	<iframe src="https://widgets.sociablekit.com/google-reviews/iframe/25667100" frameborder="0" width="100%" height="400px"></iframe>
       </div>
     </div>
     <div class="center-btn"><a href="reviews.html" class="btn-gold">Read All Reviews</a></div>
@@ -203,13 +188,11 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="index.html" class="logo"><img src="logo.jpg" alt="" class="logo-img"><span class="logo-text">GYMHOLICS</span></a>
+        <a href="index.html" class="logo"><img  class="logo-img"></a>
         <p>Where champions are made. Push your limits every single day.</p>
         <div class="social-links">
-          <a href="#" class="social">FB</a>
-          <a href="#" class="social">IG</a>
-          <a href="#" class="social">YT</a>
-          <a href="#" class="social">TW</a>
+          <a href="https://www.facebook.com/GYMHOLICS11/" class="social">FB</a><a href="https://www.instagram.com/gymholicsfitness/" class="social">IG</a>
+		  <!-- <a href="#" class="social">YT</a><a href="#" class="social">TW</a> -->
         </div>
       </div>
       <div class="footer-links">
@@ -232,10 +215,10 @@
       </div>
       <div class="footer-contact">
         <h4>Contact</h4>
-        <p>📍 Artist Village, Maharashtra</p>
-        <p>📞 +91 98765 43210</p>
-        <p>✉️ info@gymholics.in</p>
-        <p>🕐 Mon–Sat: 5AM – 11PM</p>
+        <p>📍 Prafulla Chs Ltd 1st Floor Office No 2, Mathuradas Road, Kandivali West, Mumbai-400067, Maharashtra, India</p>
+        <p>📞 +91 75068 17151</p>
+        <p>✉️ gymholics11@gymholics.in</p>
+        <p>🕐 Mon–Sat: 6AM – 11PM<br>Sun: 10:00 AM – 01:00 PM</p>
       </div>
     </div>
     <div class="footer-bottom">
