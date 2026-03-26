@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gymholics – Forge Your Legend</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <img src="logo.jpg" alt="Gymholics Logo" class="logo-img">
+      <span class="logo-text">GYMHOLICS</span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta">Join Now</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO SLIDER -->
+<section class="hero-slider" id="heroSlider">
+  <div class="slide active" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80');">
+    <div class="slide-content">
+      <p class="slide-tag">Welcome to Gymholics</p>
+      <h1>FORGE YOUR<br><span class="gold">LEGEND</span></h1>
+      <p class="slide-sub">Where champions are made. Where limits are broken.</p>
+      <div class="slide-btns">
+        <a href="contact.html" class="btn-gold">Start Today</a>
+        <a href="about.html" class="btn-outline">Our Story</a>
+      </div>
+    </div>
+  </div>
+  <div class="slide" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%), url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1600&q=80');">
+    <div class="slide-content">
+      <p class="slide-tag">State-of-the-Art Equipment</p>
+      <h1>TRAIN LIKE<br><span class="gold">A BEAST</span></h1>
+      <p class="slide-sub">Premium equipment. Expert trainers. Unstoppable results.</p>
+      <div class="slide-btns">
+        <a href="contact.html" class="btn-gold">Get Membership</a>
+        <a href="reviews.html" class="btn-outline">See Results</a>
+      </div>
+    </div>
+  </div>
+  <div class="slide video-slide">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="Images/VideoBanner.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+    <div class="slide-content">
+      <p class="slide-tag">Real People. Real Results.</p>
+      <h1>YOUR<br><span class="gold">TRANSFORMATION</span></h1>
+      <p class="slide-sub">Join thousands who changed their lives at Gymholics.</p>
+      <div class="slide-btns">
+        <a href="reviews.html" class="btn-gold">See Stories</a>
+        <a href="contact.html" class="btn-outline">Join Now</a>
+      </div>
+    </div>
+  </div>
+  <div class="slide" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%), url('https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=1600&q=80');">
+    <div class="slide-content">
+      <p class="slide-tag">Expert Coaching</p>
+      <h1>PUSH YOUR<br><span class="gold">LIMITS</span></h1>
+      <p class="slide-sub">Certified trainers dedicated to your success every step.</p>
+      <div class="slide-btns">
+        <a href="about.html" class="btn-gold">Meet Trainers</a>
+        <a href="contact.html" class="btn-outline">Free Trial</a>
+      </div>
+    </div>
+  </div>
+
+  <button class="slider-btn prev" id="prevBtn">&#10094;</button>
+  <button class="slider-btn next" id="nextBtn">&#10095;</button>
+  <div class="slider-dots" id="sliderDots"></div>
+</section>
+
+<!-- STATS BAR -->
+<section class="stats-bar">
+  <div class="stat"><span class="stat-num" data-target="2500">0</span><span class="stat-label">Members</span></div>
+  <div class="stat"><span class="stat-num" data-target="15">0</span><span class="stat-label">Expert Trainers</span></div>
+  <div class="stat"><span class="stat-num" data-target="8">0</span><span class="stat-label">Years Running</span></div>
+  <div class="stat"><span class="stat-num" data-target="98">0</span><span class="stat-label">% Satisfaction</span></div>
+</section>
+
+<!-- PROGRAMS -->
+<section class="programs section-pad">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-tag">What We Offer</p>
+      <h2>OUR <span class="gold">PROGRAMS</span></h2>
+    </div>
+    <div class="programs-grid">
+      <div class="program-card">
+        <div class="program-icon">💪</div>
+        <h3>Strength Training</h3>
+        <p>Build raw power with our progressive overload programs designed by elite coaches.</p>
+        <a href="contact.html" class="card-link">Enroll →</a>
+      </div>
+      <div class="program-card featured">
+        <div class="program-icon">🔥</div>
+        <h3>HIIT Cardio</h3>
+        <p>Burn fat fast with high-intensity interval training that keeps burning long after.</p>
+        <a href="contact.html" class="card-link">Enroll →</a>
+      </div>
+      <div class="program-card">
+        <div class="program-icon">🥊</div>
+        <h3>Combat Fitness</h3>
+        <p>Boxing, MMA-inspired workouts that challenge your body and sharpen your mind.</p>
+        <a href="contact.html" class="card-link">Enroll →</a>
+      </div>
+      <div class="program-card">
+        <div class="program-icon">🧘</div>
+        <h3>Yoga & Recovery</h3>
+        <p>Balance strength with flexibility. Recovery sessions to keep you performing peak.</p>
+        <a href="contact.html" class="card-link">Enroll →</a>
+      </div>
+      <div class="program-card">
+        <div class="program-icon">🏋️</div>
+        <h3>Olympic Lifting</h3>
+        <p>Master the snatch and clean & jerk under certified Olympic weightlifting coaches.</p>
+        <a href="contact.html" class="card-link">Enroll →</a>
+      </div>
+      <div class="program-card">
+        <div class="program-icon">🏃</div>
+        <h3>Endurance & Run</h3>
+        <p>Training plans for 5K to marathon with track sessions and zone-based cardio.</p>
+        <a href="contact.html" class="card-link">Enroll →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section class="cta-strip">
+  <div class="container">
+    <h2>READY TO <span class="gold">TRANSFORM?</span></h2>
+    <p>First month free for new members. No contracts. Cancel anytime.</p>
+    <a href="contact.html" class="btn-gold">Claim Free Trial</a>
+  </div>
+</section>
+
+<!-- GALLERY PREVIEW -->
+<section class="gallery-preview section-pad">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-tag">Inside Gymholics</p>
+      <h2>OUR <span class="gold">FACILITY</span></h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item tall" style="background-image:url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80')"><div class="gallery-overlay"><span>Main Floor</span></div></div>
+      <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80')"><div class="gallery-overlay"><span>Free Weights</span></div></div>
+      <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80')"><div class="gallery-overlay"><span>Cardio Zone</span></div></div>
+      <div class="gallery-item wide" style="background-image:url('https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=800&q=80')"><div class="gallery-overlay"><span>Group Classes</span></div></div>
+      <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&q=80')"><div class="gallery-overlay"><span>Boxing Ring</span></div></div>
+    </div>
+    <div class="center-btn"><a href="reviews.html" class="btn-outline">View Full Gallery</a></div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL QUICK -->
+<section class="testimonial-quick section-pad">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-tag">Member Stories</p>
+      <h2>WHAT THEY <span class="gold">SAY</span></h2>
+    </div>
+    <div class="testi-carousel" id="testiCarousel">
+      <div class="testi-track" id="testiTrack">
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>"Lost 18kg in 4 months. The trainers here are different — they push you but also care deeply about your form and health."</p>
+          <div class="testi-author"><div class="author-avatar" style="background:#d4af37">R</div><div><strong>Rahul Mehta</strong><span>Member since 2022</span></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>"Best gym in the region. The equipment is top-notch, the vibe is electric, and every session leaves me feeling unstoppable."</p>
+          <div class="testi-author"><div class="author-avatar" style="background:#b8860b">P</div><div><strong>Priya Sharma</strong><span>Member since 2023</span></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>"Joined for weight loss, stayed for the community. Gymholics is more than a gym — it's a lifestyle transformation hub."</p>
+          <div class="testi-author"><div class="author-avatar" style="background:#c8942a">A</div><div><strong>Arjun Patil</strong><span>Member since 2021</span></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="center-btn"><a href="reviews.html" class="btn-gold">Read All Reviews</a></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><img src="logo.jpg" alt="" class="logo-img"><span class="logo-text">GYMHOLICS</span></a>
+        <p>Where champions are made. Push your limits every single day.</p>
+        <div class="social-links">
+          <a href="#" class="social">FB</a>
+          <a href="#" class="social">IG</a>
+          <a href="#" class="social">YT</a>
+          <a href="#" class="social">TW</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="reviews.html">Reviews & Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="#">Strength Training</a></li>
+          <li><a href="#">HIIT Cardio</a></li>
+          <li><a href="#">Combat Fitness</a></li>
+          <li><a href="#">Yoga & Recovery</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>📍 Artist Village, Maharashtra</p>
+        <p>📞 +91 98765 43210</p>
+        <p>✉️ info@gymholics.in</p>
+        <p>🕐 Mon–Sat: 5AM – 11PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Gymholics. All rights reserved. | Designed for Champions.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
