@@ -46,49 +46,37 @@
       <div class="contact-form-wrap">
         <p class="section-tag">Send Us a Message</p>
         <h2>LET'S <span class="gold">TALK</span></h2>
-        <form class="contact-form" id="contactForm">
+        <form class="contact-form" id="contactForm" novalidate>
           <div class="form-row">
             <div class="form-group">
               <label>First Name *</label>
-              <input type="text" placeholder="First Name" required>
+              <input type="text" placeholder="First Name" name="fname" id="fname" required>
             </div>
             <div class="form-group">
               <label>Last Name *</label>
-              <input type="text" placeholder="Last Name" required>
+              <input type="text" placeholder="Last Name" id="lname" name="lname"  required>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
               <label>Email *</label>
-              <input type="email" placeholder="your@email.com" required>
+              <input type="email" placeholder="your@email.com" id="email" name="email" required>
             </div>
             <div class="form-group">
               <label>Phone</label>
-              <input type="tel" placeholder="+91 XXXXX XXXXX">
+              <input type="tel" placeholder="+91 XXXXX XXXXX" id="phone" name="phone" required>
             </div>
           </div>
           <div class="form-group">
-            <label>I'm Interested In</label>
-            <select>
-              <option value="">Select a Program</option>
-              <option>Basic Membership</option>
-              <option>Pro Membership</option>
-              <option>Elite Membership</option>
-              <option>Strength Training</option>
-              <option>HIIT Cardio</option>
-              <option>Combat Fitness</option>
-              <option>Yoga & Recovery</option>
-              <option>Personal Training</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="form-group">
             <label>Message</label>
-            <textarea placeholder="Tell us about your fitness goals or ask any questions..." rows="5"></textarea>
+            <textarea placeholder="Tell us about your fitness goals or ask any questions..." rows="5" id="message" name="message"></textarea>
           </div>
-          <button type="submit" class="btn-gold submit-btn">Send Message</button>
-          <div class="form-success" id="contactSuccess">
+          <button type="submit" class="btn-gold submit-btn" id="submitBtn">Send Message</button>
+          <div class="form-success" id="contactSuccess" style="display:none;">
             <span>✅ Message sent! We'll get back to you within 24 hours.</span>
+          </div>
+          <div id="contactError" style="display:none; margin-top:1rem; padding:0.75rem 1rem; background:rgba(224,85,85,0.08); border-left:3px solid #e05555; color:#e05555; border-radius:4px; font-size:0.9rem;">
+            <span id="errorMsg">❌ Something went wrong. Please try again.</span>
           </div>
         </form>
       </div>
@@ -110,14 +98,14 @@
             <div class="info-icon">📞</div>
             <div>
               <h4>Phone</h4>
-              <p>+91 75068 17151<br>+91 75068 17151</p>
+			  <a href="tel:+917506817151">917506817151</a>
             </div>
           </div>
           <div class="info-card">
             <div class="info-icon">✉️</div>
             <div>
               <h4>Email</h4>
-              <p>gymholics11@gmail.com<br>gymholics11@gmail.com</p>
+			  <a href="mailto:gymholics11@gmail.com">gymholics11@gmail.com</a>
             </div>
           </div>
           <div class="info-card">
@@ -208,5 +196,100 @@
 </footer>
 
 <script src="script.js"></script>
+
+<script>
+/* ─────────────────────────────────────────────────────────────
+   Gymholics Contact Form
+   Sends via your own Gmail using Google Apps Script.
+   Paste your deployed Web App URL below — that's the only thing
+   you need to change in this file.
+───────────────────────────────────────────────────────────── */
+
+// ── PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL HERE ───────────
+const SCRIPT_URL = 'https://script.google.com/macros/s11p-0LYwK7lb7bcVVs6sSJcLf6vlYgAh_IEBQAnfEc7aj_vvkDrkS2-WK/exec';
+// Example: 'https://script.google.com/macros/s/AKfy.../exec'
+// ─────────────────────────────────────────────────────────────
+
+(function () {
+  const form       = document.getElementById('contactForm');
+  const submitBtn  = document.getElementById('submitBtn');
+  const successBox = document.getElementById('contactSuccess');
+  const errorBox   = document.getElementById('contactError');
+  const errorMsg   = document.getElementById('errorMsg');
+
+  function showSuccess() {
+    successBox.style.display = 'block';
+    errorBox.style.display   = 'none';
+  //  form.reset();
+    successBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function showError(msg) {
+    errorMsg.textContent     = '❌ ' + (msg || 'Something went wrong. Please try again.');
+   errorBox.style.display   = 'block';
+   successBox.style.display = 'none'; 
+  console.log(msg);
+  }
+
+  function setLoading(on) {
+    submitBtn.disabled      = on;
+    submitBtn.textContent   = on ? 'Sending…' : 'Send Message';
+    submitBtn.style.opacity = on ? '0.7' : '1';
+  }
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    successBox.style.display = 'none';
+    //errorBox.style.display   = 'none';
+
+    const fname   = document.getElementById('fname').value.trim();
+    const lname   = document.getElementById('lname').value.trim();
+    const email   = document.getElementById('email').value.trim();
+    const phone   = document.getElementById('phone').value.trim();
+   // const program = document.getElementById('program').value;
+    const message = document.getElementById('message').value.trim();
+	alert(fname);
+	console.log(fname);
+	console.log(lname);
+
+    // Validation
+    if (!fname || !lname)  return showError('Please enter your first and last name.');
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+                           return showError('Please enter a valid email address.');
+    if (!message)          return showError('Please write a message before submitting.');
+
+    if (!SCRIPT_URL || SCRIPT_URL === 'YOUR_WEB_APP_URL_HERE') {
+      return showError('Web App URL not set. Please follow the setup instructions.');
+    }
+
+    setLoading(true);
+
+    try {
+      // Google Apps Script requires no-cors mode
+      await fetch(SCRIPT_URL, {
+        method:  'POST',
+       // mode:    'no-cors',         // required for Apps Script
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name:    fname + ' ' + lname,
+          email,
+          phone:   phone   || 'Not provided',
+       //   program: program || 'Not specified',
+          message,
+        }),
+      });
+console.log('test');
+      // no-cors means we can't read the response — assume success
+      showSuccess();
+
+    } catch (err) {
+      console.error('[Gymholics form]', err);
+      showError('Network error. Please email us directly at gymholics@gmail.com');
+    } finally {
+      setLoading(false);
+    }
+  });
+})();
+</script>
 </body>
 </html>
