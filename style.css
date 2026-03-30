@@ -264,7 +264,7 @@ p { line-height: 1.7; color: var(--light-gray); }
 .trainers-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
 .trainer-card { background: var(--dark2); border-radius: 10px; overflow: hidden; border: 1px solid rgba(212,175,55,0.1); transition: var(--transition); }
 .trainer-card:hover { transform: translateY(-6px); border-color: rgba(212,175,55,0.4); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
-.trainer-img { height: 50%; background-size: cover; background-position: top center; }
+.trainer-img { height: 500px; background-size: cover; background-position: top center; }
 .trainer-info { padding: 24px; }
 .trainer-info h3 { color: var(--white); margin-bottom: 4px; font-size: 1.3rem; }
 .trainer-role { color: var(--gold); font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 12px; display: block; }
